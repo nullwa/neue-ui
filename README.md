@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/loom-ui-blue.svg" alt="Loom UI Logo" width="80" />
+  <img src="public/icon-blue.svg" alt="Neue UI Logo" height="100" />
 </p>
 
 # Neue UI
@@ -22,7 +22,7 @@ Forget boilerplate code — **copy, paste, and go**.
 1. **Clone the repo**:
 
 ```bash
-git clone https://github.com/nullwa/@neue/ui.git
+git clone https://github.com/nullwa/neue-ui
 ```
 
 2. **Copy the component you need** into your project:

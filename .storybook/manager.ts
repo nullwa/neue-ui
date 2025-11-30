@@ -6,9 +6,9 @@ addons.setConfig({
   panelPosition: 'right',
   theme: create({
     base: 'dark',
-    brandTitle: 'Loom',
-    brandUrl: 'https://github.com/nullwa/loom',
-    brandImage: '/loom-ui-full-white.svg',
+    brandTitle: 'Neue UI',
+    brandUrl: 'https://github.com/nullwa/neue-ui',
+    brandImage: '/icon-text-white.svg',
     appBorderRadius: 2,
     inputBorderRadius: 2,
     fontBase: '\'IBM Plex Sans\', sans-serif',
