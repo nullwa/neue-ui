@@ -1,7 +1,7 @@
 'use client'
 
 import { type FC, useState } from 'react'
-import * as SwitchPrimitive from '@radix-ui/react-switch'
+import {Switch as Primitive} from '@base-ui-components/react'
 import { cva, tm, type VariantProps } from '@/helpers/tailwind-merge'
 
 type ComponentProps = VariantProps<typeof styles> & {
@@ -27,9 +27,9 @@ const Switch: FC<ComponentProps> = ({label, hint, bordered = false, variant = 'b
   return (
     <div className={tm('flex items-center select-none', bordered && 'border border-secondary rounded-xs bg-secondary')}>
       <label className={tm('w-full flex items-center gap-3 cursor-pointer py-3 px-4', direction === 'leading' ? 'flex-row' : 'flex-row-reverse', disabled && 'cursor-not-allowed')}>
-        <SwitchPrimitive.Root className={tm(styles({variant, radius}))} disabled={disabled} checked={checked} onCheckedChange={handleCheckedChange}>
-          <SwitchPrimitive.Thumb className='block w-4 h-4 bg-primary border border-secondary shadow-xs transition-transform duration-200 translate-x-[2px] data-[state=checked]:translate-x-[19px]'/>
-        </SwitchPrimitive.Root>
+        <Primitive.Root className={tm(styles({variant, radius}))} disabled={disabled} checked={checked} onCheckedChange={handleCheckedChange}>
+          <Primitive.Thumb className='block w-4 h-4 bg-primary border border-secondary shadow-xs transition-transform duration-200 translate-x-[2px] data-[state=checked]:translate-x-[19px]'/>
+        </Primitive.Root>
 
         {label && (
           <div className='flex-1 flex flex-col gap-1.5 cursor-pointer'>

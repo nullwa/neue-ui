@@ -2,7 +2,6 @@
 
 import { type ButtonHTMLAttributes, type FC } from 'react'
 
-import { Slot } from 'radix-ui'
 import { cva, tm, type VariantProps } from '@/helpers/tailwind-merge'
 import { DynamicIcon, type IconName } from 'lucide-react/dynamic'
 
@@ -17,14 +16,14 @@ const Button: FC<ComponentProps> = ({children, loading = false, icon = undefined
   const hasText = children && typeof children === 'string' && children.trim().length > 0
 
   return (
-    <Slot.Root data-slot='button' data-loading={loading || undefined} className={tm(styles({variant, isFancy, size, radius, className}), !hasText && 'px-0')} {...rest}>
+    <button type={'button'} data-slot='button' data-loading={loading || undefined} className={tm(styles({variant, isFancy, size, radius, className}), !hasText && 'px-0')} {...rest}>
       <div>
         <div className={tm('flex items-center justify-between gap-2', iconPosition === 'trailing' && 'flex-row-reverse')}>
           {!loading ? icon && <DynamicIcon name={icon} size={iconSizeMap[size ?? 'sm']}/> : <DynamicIcon name='loader' data-icon='loading' size={iconSizeMap[size ?? 'sm']} className='animate-spin opacity-85'/>}
           {hasText && <span className='first-letter:uppercase'>{children}</span>}
         </div>
       </div>
-    </Slot.Root>
+    </button>
   )
 }
 
