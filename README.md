@@ -2,10 +2,9 @@
   <img src="public/loom-ui-blue.svg" alt="Loom UI Logo" width="80" />
 </p>
 
-# Loom
+# Neue UI
 
-**Loom UI** is an open-source **React component library** built with **TypeScript** and **Tailwind CSS**.
-It gives you **ready-to-use, responsive, and accessible components** so you can build modern web apps **faster and smarter**.
+**Neue UI** is an open-source **React component library** built with **TypeScript** and **Tailwind CSS**. It gives you **ready-to-use, responsive, and accessible components** so you can build modern web apps **faster and smarter**.
 
 Forget boilerplate code — **copy, paste, and go**.
 
@@ -23,7 +22,7 @@ Forget boilerplate code — **copy, paste, and go**.
 1. **Clone the repo**:
 
 ```bash
-git clone https://github.com/nullwa/loom.git
+git clone https://github.com/nullwa/@neue/ui.git
 ```
 
 2. **Copy the component you need** into your project:
