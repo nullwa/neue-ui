@@ -9,12 +9,14 @@ const config: StorybookConfig = {
       nextConfigPath: '../next.config.js'
     }
   },
-  // staticDirs: ['../public'],
-  managerHead: (head) => `
-    ${head}
-    <link rel="icon" type="image/x-icon" href="/icon-blue.svg" />
-    <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/plex/sans.css"/>
-  `,
+  staticDirs: ['public'],
+  managerHead: (head) => {
+    return `
+      ${head}
+      <link rel="icon" type="image/x-icon" href="/icon-blue.svg" />
+      <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/plex/sans.css" />
+    `
+  },
   docs: {
     docsMode: true,
     defaultName: 'Documentation'
