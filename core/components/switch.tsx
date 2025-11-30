@@ -1,34 +1,24 @@
 'use client'
 
-import { type FC, useState } from 'react'
-import {Switch as Primitive} from '@base-ui-components/react'
+import { type FC } from 'react'
+import { Switch as Primitive } from '@base-ui-components/react'
 import { cva, tm, type VariantProps } from '@/helpers/tailwind-merge'
 
-type ComponentProps = VariantProps<typeof styles> & {
+type ComponentProps = React.ComponentProps<typeof Primitive.Root> & VariantProps<typeof styles> & {
   label?: string
   hint?: string
   disabled?: boolean
   bordered?: boolean
-  checked?: boolean
-  onCheckedChange?: (checked: boolean) => void
   direction?: 'trailing' | 'leading'
 }
 
-const Switch: FC<ComponentProps> = ({label, hint, bordered = false, variant = 'brand', radius = 'squared', disabled = false, direction = 'leading', checked: controlledChecked, onCheckedChange}) => {
-  const [internalChecked, setInternalChecked] = useState(controlledChecked ?? false)
-  const isControlled = controlledChecked !== undefined
-  const checked = isControlled ? controlledChecked : internalChecked
-
-  const handleCheckedChange = (next: boolean) => {
-    if (!isControlled) setInternalChecked(next)
-    onCheckedChange?.(next)
-  }
+const Switch: FC<ComponentProps> = ({label, hint, bordered = false, variant = 'brand', radius = 'pilled', disabled = false, direction = 'leading', ...rest}) => {
 
   return (
     <div className={tm('flex items-center select-none', bordered && 'border border-secondary rounded-xs bg-secondary')}>
       <label className={tm('w-full flex items-center gap-3 cursor-pointer py-3 px-4', direction === 'leading' ? 'flex-row' : 'flex-row-reverse', disabled && 'cursor-not-allowed')}>
-        <Primitive.Root className={tm(styles({variant, radius}))} disabled={disabled} checked={checked} onCheckedChange={handleCheckedChange}>
-          <Primitive.Thumb className='block w-4 h-4 bg-primary border border-secondary shadow-xs transition-transform duration-200 translate-x-[2px] data-[state=checked]:translate-x-[19px]'/>
+        <Primitive.Root disabled={disabled} className={tm(styles({variant, radius}))} {...rest}>
+          <Primitive.Thumb className='block w-4 h-4 bg-primary border border-secondary shadow-xs transition-transform duration-200 translate-x-[2px] data-[checked]:translate-x-[19px]'/>
         </Primitive.Root>
 
         {label && (
@@ -44,13 +34,13 @@ const Switch: FC<ComponentProps> = ({label, hint, bordered = false, variant = 'b
 
 Switch.displayName = 'Switch'
 
-const styles = cva('cursor-pointer w-10 h-6 rounded-xs bg-secondary dark:bg-secondary-solid border border-secondary dark:border-primary',
+const styles = cva('cursor-pointer flex items-center w-10 h-6 rounded-xs bg-secondary dark:bg-secondary-solid border border-secondary dark:border-primary',
   {
     variants: {
       variant: {
-        default: 'data-[state=checked]:bg-fg-secondary',
-        brand: 'data-[state=checked]:bg-brand-solid data-[state=checked]:border-brand',
-        error: 'data-[state=checked]:bg-error-solid data-[state=checked]:border-error'
+        default: 'data-[checked]:bg-fg-secondary',
+        brand: 'data-[checked]:bg-brand-solid data-[checked]:border-brand',
+        error: 'data-[checked]:bg-error-solid data-[checked]:border-error'
       },
       radius: {
         squared: 'rounded-xs [&>span]:rounded-xs',

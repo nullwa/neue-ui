@@ -31,7 +31,8 @@ const meta = {
     direction: {
       control: {type: 'radio'},
       options: ['leading', 'trailing']
-    }
+    },
+    defaultChecked: {control: 'boolean'}
   }
 } satisfies Meta<typeof Switch>
 export default meta
@@ -45,7 +46,9 @@ export const Default: Story = {
     hint: 'You must accept before continuing',
     bordered: false,
     disabled: false,
-    radius: 'squared',
-    direction: 'leading'
+    radius: 'pilled',
+    direction: 'leading',
+    defaultChecked: false,
+    onCheckedChange: (x) => console.log('toggled', x)
   }
 }
