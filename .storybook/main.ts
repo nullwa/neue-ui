@@ -9,7 +9,7 @@ const config: StorybookConfig = {
       nextConfigPath: '../next.config.js'
     }
   },
-  staticDirs: ['../public'],
+  // staticDirs: ['../public'],
   managerHead: (head) => `
     ${head}
     <link rel="icon" type="image/x-icon" href="/icon-blue.svg" />
