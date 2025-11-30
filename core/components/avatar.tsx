@@ -2,12 +2,12 @@
 
 import { type FC, type HTMLAttributes } from 'react'
 
-import { Avatar as Primitive } from 'radix-ui'
+import { Avatar as Primitive } from '@base-ui-components/react'
 import { cva, tm, type VariantProps } from '@/helpers/tailwind-merge'
 import { Indicator } from '@/core/shared/indicator'
 import { VerifiedTick } from '@/core/shared/verfied-tick'
 
-type ComponentProps = HTMLAttributes<HTMLDivElement> & VariantProps<typeof styles> & {
+type ComponentProps = HTMLAttributes<HTMLSpanElement> & VariantProps<typeof styles> & {
   src?: string
   fallback: string
   status?: 'online' | 'offline' | 'busy' | 'away'

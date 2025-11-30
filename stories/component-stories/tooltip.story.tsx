@@ -49,10 +49,10 @@ const meta = {
     },
     placement: {
       control: {type: 'select'},
-      options: ['top', 'right', 'bottom', 'left'],
+      options: ['top', 'right', 'bottom', 'left', 'inline-end', 'inline-start'],
       description: 'Controls which side of the trigger element the tooltip will appear on.',
       table: {
-        type: {summary: '\'top\' | \'right\' | \'bottom\' | \'left\''},
+        type: {summary: '\'top\' | \'right\' | \'bottom\' | \'left\' | \'inline-end\' | \'inline-start\''},
         defaultValue: {summary: 'top'}
       }
     },
