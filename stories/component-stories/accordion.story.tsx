@@ -14,21 +14,12 @@ const meta: Meta<typeof Accordion> = {
     }
   },
   argTypes: {
-    type: {
-      control: 'radio',
-      options: ['single', 'multiple'],
+    multiple: {
+      control: 'boolean',
       description: 'Accordion behavior for expanding items.',
       table: {
-        type: {summary: `'single' | 'multiple'`},
-        defaultValue: {summary: 'single'}
-      }
-    },
-    collapsible: {
-      control: 'boolean',
-      description: 'Allows collapsing the active item if true.',
-      table: {
-        type: {summary: 'boolean'},
-        defaultValue: {summary: 'true'}
+        type: {summary: `'True' | 'False'`},
+        defaultValue: {summary: 'False'}
       }
     },
     variant: {
@@ -56,8 +47,7 @@ const meta: Meta<typeof Accordion> = {
     }
   },
   args: {
-    type: 'single',
-    collapsible: true,
+    multiple: false,
     variant: 'solid',
     indicator: 'arrow',
     size: 'md'
@@ -70,8 +60,7 @@ type Story = StoryObj<typeof Accordion>
 // Default story
 export const Default: Story = {
   args: {
-    type: 'single',
-    collapsible: true,
+    multiple: false,
     variant: 'solid',
     indicator: 'plus',
     items: [
