@@ -14,7 +14,7 @@ type ComponentProps = InputHTMLAttributes<HTMLInputElement> & VariantProps<typeo
 
 const Checkbox: FC<ComponentProps> = ({label, hint, bordered = false, variant = 'brand', disabled = false, direction = 'leading', className, ...rest}) => {
   return (
-    <div className={tm('flex items-center select-none', bordered && 'border border-secondary rounded-xs bg-secondary')}>
+    <div className={tm('flex items-center select-none', bordered && 'border border-secondary rounded-sm bg-secondary')}>
       <label htmlFor={`${label}-checking-item`} className={tm('w-full flex items-center gap-3 cursor-pointer py-3 px-4', direction === 'leading' ? 'flex-row' : 'flex-row-reverse', disabled && 'cursor-not-allowed')}>
         <div className={tm('relative flex items-center justify-center')}>
           <input id={`${label}-checking-item`} type='checkbox' className={tm(styles({variant, className}))} disabled={disabled} {...rest} />
@@ -34,7 +34,7 @@ const Checkbox: FC<ComponentProps> = ({label, hint, bordered = false, variant = 
 Checkbox.displayName = 'Checkbox'
 
 const styles = cva(
-  'w-4.5 h-4.5 peer cursor-pointer transition-all appearance-none rounded-xs shadow-xs border border-utility-gray-300 outline-none disabled:cursor-not-allowed disabled:text-fg-disabled disabled:bg-disabled disabled:shadow-xs disabled:ring-disabled_subtle',
+  'w-4.5 h-4.5 peer cursor-pointer transition-all appearance-none rounded-sm shadow-xs border border-utility-gray-300 outline-none disabled:cursor-not-allowed disabled:text-fg-disabled disabled:bg-disabled disabled:shadow-xs disabled:ring-disabled_subtle',
   {
     variants: {
       variant: {

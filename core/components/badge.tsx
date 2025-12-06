@@ -55,7 +55,7 @@ const styles = cva('select-none flex items-center gap-1 px-2 py-0.5 font-medium 
     },
     radius: {
       pilled: 'rounded-full',
-      squared: 'rounded-xs'
+      squared: 'rounded-sm'
     }
   },
   defaultVariants: {

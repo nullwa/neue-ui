@@ -41,7 +41,7 @@ const styles = cva(['overflow-hidden shrink-0 flex items-center justify-center c
     },
     radius: {
       rounded: 'rounded-full',
-      squared: 'rounded-xs'
+      squared: 'rounded-sm'
     }
   },
   defaultVariants: {

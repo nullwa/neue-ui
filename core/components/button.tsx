@@ -59,7 +59,7 @@ const styles = cva(
         lg: 'h-10 min-w-10 px-5 text-lg'
       },
       radius: {
-        rounded: 'rounded-xs before:rounded-[1px]',
+        rounded: 'rounded-sm before:rounded-[1px]',
         pilled: 'rounded-full before:rounded-full'
       }
     },

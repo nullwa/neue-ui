@@ -13,7 +13,7 @@ type ComponentProps = InputHTMLAttributes<HTMLInputElement> & VariantProps<typeo
 
 const Radio: FC<ComponentProps> = ({label, hint, bordered = false, variant = 'brand', disabled = false, direction = 'leading', className, ...rest}) => {
   return (
-    <div className={tm('flex items-center select-none', bordered && 'border border-secondary rounded-xs bg-secondary')}>
+    <div className={tm('flex items-center select-none', bordered && 'border border-secondary rounded-sm bg-secondary')}>
       <label htmlFor={`${label}-radio-item`} className={tm('w-full flex items-center gap-3 cursor-pointer py-3 px-4', direction === 'leading' ? 'flex-row' : 'flex-row-reverse', disabled && 'cursor-not-allowed opacity-60')}>
         <div className='relative flex items-center justify-center'>
           <input id={`${label}-radio-item`} type='radio' className={tm(styles({variant}), className)} disabled={disabled} {...rest}/>

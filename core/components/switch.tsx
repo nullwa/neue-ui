@@ -13,9 +13,8 @@ type ComponentProps = React.ComponentProps<typeof Primitive.Root> & VariantProps
 }
 
 const Switch: FC<ComponentProps> = ({label, hint, bordered = false, variant = 'brand', radius = 'pilled', disabled = false, direction = 'leading', ...rest}) => {
-
   return (
-    <div className={tm('flex items-center select-none', bordered && 'border border-secondary rounded-xs bg-secondary')}>
+    <div className={tm('flex items-center select-none', bordered && 'border border-secondary rounded-sm bg-secondary')}>
       <label className={tm('w-full flex items-center gap-3 cursor-pointer py-3 px-4', direction === 'leading' ? 'flex-row' : 'flex-row-reverse', disabled && 'cursor-not-allowed')}>
         <Primitive.Root disabled={disabled} className={tm(styles({variant, radius}))} {...rest}>
           <Primitive.Thumb className='block w-4 h-4 bg-primary border border-secondary shadow-xs transition-transform duration-200 translate-x-[2px] data-[checked]:translate-x-[19px]'/>
@@ -34,24 +33,22 @@ const Switch: FC<ComponentProps> = ({label, hint, bordered = false, variant = 'b
 
 Switch.displayName = 'Switch'
 
-const styles = cva('cursor-pointer flex items-center w-10 h-6 rounded-xs bg-secondary dark:bg-secondary-solid border border-secondary dark:border-primary',
-  {
-    variants: {
-      variant: {
-        default: 'data-[checked]:bg-fg-secondary',
-        brand: 'data-[checked]:bg-brand-solid data-[checked]:border-brand',
-        error: 'data-[checked]:bg-error-solid data-[checked]:border-error'
-      },
-      radius: {
-        squared: 'rounded-xs [&>span]:rounded-xs',
-        pilled: 'rounded-full [&>span]:rounded-full'
-      }
+const styles = cva('cursor-pointer flex items-center w-10 h-6 rounded-sm bg-secondary dark:bg-secondary-solid border border-secondary dark:border-primary', {
+  variants: {
+    variant: {
+      default: 'data-[checked]:bg-fg-secondary',
+      brand: 'data-[checked]:bg-brand-solid data-[checked]:border-brand',
+      error: 'data-[checked]:bg-error-solid data-[checked]:border-error'
     },
-    defaultVariants: {
-      variant: 'brand',
-      radius: 'squared'
+    radius: {
+      squared: 'rounded-sm [&>span]:rounded-sm',
+      pilled: 'rounded-full [&>span]:rounded-full'
     }
+  },
+  defaultVariants: {
+    variant: 'brand',
+    radius: 'squared'
   }
-)
+})
 
 export { Switch }

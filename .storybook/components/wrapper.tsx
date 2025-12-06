@@ -7,12 +7,12 @@ const Wrapper = (Story, context: StoryContext) => {
   const {theme} = context.globals
 
   useEffect(() => {
-    console.log(theme)
-    console.log(context)
+    if (theme === 'dark') document.documentElement.classList.add('dark-mode')
+    else document.documentElement.classList.remove('dark-mode')
   }, [theme])
 
   return (
-    <div className={`prose relative min-h-64 p-4 flex items-center justify-center ${theme === 'dark' && 'dark-mode'} bg-primary`}>
+    <div className={`prose relative min-h-64 p-4 flex items-center justify-center bg-primary`}>
       <Story/>
     </div>
   )

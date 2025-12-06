@@ -62,8 +62,8 @@ const styles = cva('cursor-pointer w-full flex items-center text-md text-primary
   variants: {
     variant: {
       default: 'border-b border-secondary rounded-none',
-      outline: 'border border-secondary rounded-xs',
-      solid: 'border border-secondary bg-secondary/80 rounded-xs'
+      outline: 'border border-secondary rounded-sm',
+      solid: 'border border-secondary bg-secondary/80 rounded-sm'
     },
     size: {
       sm: 'min-h-8',

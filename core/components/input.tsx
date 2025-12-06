@@ -64,7 +64,7 @@ const styles = cva(
         lg: '[&>input]:placeholder:text-md focus-within:ring-3 h-10'
       },
       radius: {
-        squared: 'rounded-xs',
+        squared: 'rounded-sm',
         pilled: 'rounded-full'
       },
       direction: {
