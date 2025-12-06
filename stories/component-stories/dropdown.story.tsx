@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/nextjs'
 import { DropDown } from '@/core/components/dropdown'
 
 import Template from '@/templates/dropdown.template.mdx'
-import { ChevronsUpDown } from 'lucide-react'
 
 // Storybook metadata
 const meta = {
@@ -13,6 +12,13 @@ const meta = {
     docs: {
       page: Template
     }
+  },
+  argTypes: {
+    multiple: {
+      control: 'boolean',
+      description: 'Allows multiple selections if set to true.',
+      defaultValue: true
+    }
   }
 } satisfies  Meta<typeof DropDown>
 
@@ -21,6 +27,7 @@ type Story = StoryObj<typeof DropDown>
 
 export const Default: Story = {
   args: {
+    multiple: false,
     data: [
       {value: 'fruit-orange', label: 'Orange', disabled: false, group: 'Fruits'},
       {value: 'fruit-strawberry', label: 'Strawberry', disabled: false, group: 'Fruits'},

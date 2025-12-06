@@ -25,8 +25,10 @@ const DropDown: FC<CompoenentProps> = ({data, multiple = true, align = 'start'})
   return (
     <Primitive.Root items={data} multiple={multiple}>
       <Primitive.Trigger
-        className='flex bg-[canvas] h-10 min-w-[12rem] items-center justify-between gap-3 rounded-sm border border-gray-200 pr-3 pl-3.5 text-base text-gray-900 select-none hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800 data-[popup-open]:bg-gray-100 cursor-default'>
-        <Primitive.Value/>
+        className='flex bg-primary dark:bg-secondary h-9 w-full items-center justify-between gap-3 rounded-sm border border-primary pr-3 pl-3.5 text-base text-primary select-none hover:bg-tertiary data-[popup-open]:bg-primary dark:data-[popup-open]:bg-secondary cursor-pointer'>
+        <div className={'flex-1 text-left'}>
+          <Primitive.Value/>
+        </div>
         <Primitive.Icon className='flex'>
           <ChevronsUpDown size={14} className={'text-secondary hover:bg-tertiary rounded-full'}/>
         </Primitive.Icon>
@@ -51,7 +53,7 @@ const DropDown: FC<CompoenentProps> = ({data, multiple = true, align = 'start'})
 
             <Primitive.List>
               {(item: Item) => (
-                <Primitive.Item value={item} key={item.value} disabled={item.disabled} className={tm('pl-6 pr-2 py-1 cursor-pointer flex items-center gap-2 hover:bg-gray-100', item.disabled && 'opacity-50 cursor-not-allowed')}>
+                <Primitive.Item value={item} key={item.value} disabled={item.disabled} className={tm('pl-6 pr-2 py-1 cursor-pointer flex items-center gap-2 hover:bg-tertiary', item.disabled && 'opacity-50 cursor-not-allowed')}>
                   <div className={'flex-1'}>{item.label}</div>
                   <Primitive.ItemIndicator>
                     <Check size={14} className={'text-secondary'}/>
