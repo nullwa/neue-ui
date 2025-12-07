@@ -38,6 +38,11 @@ const meta = {
     placeholder: {
       control: {type: 'text'},
       description: 'Placeholder text for the search input.'
+    },
+    size: {
+      control: {type: 'radio'},
+      options: ['sm', 'md', 'lg'],
+      description: 'Size of the dropdown component.'
     }
   }
 } satisfies  Meta<typeof DropDown>
@@ -51,6 +56,7 @@ export const Default: Story = {
     label: 'Select...',
     placeholder: 'Search...',
     align: 'center',
+    size: 'md',
     grouped: false,
     data: [
       {label: {title: 'Alice Johnson', summary: 'Product Designer'}, value: 'alice', group: 'Design'},

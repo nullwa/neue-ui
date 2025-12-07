@@ -3,16 +3,17 @@
 import { type FC, Fragment, useRef } from 'react'
 import { Combobox as Primitive, Avatar } from '@base-ui-components/react'
 
-import { tm, cva, type VariantProps } from '@/helpers/tailwind-merge'
+import { tm } from '@/helpers/tailwind-merge'
 import { Check, ChevronsUpDown, X } from 'lucide-react'
 
-type ComponentProps = React.ComponentProps<typeof Primitive.Root> & VariantProps<typeof styles> & {
+type ComponentProps = React.ComponentProps<typeof Primitive.Root> & {
   data: Item[]
   multiple?: boolean
   label: string
   align?: 'start' | 'center' | 'end'
   placeholder?: string
   grouped?: boolean
+  size?: 'sm' | 'md' | 'lg'
 }
 
 export type Item = {
@@ -24,13 +25,13 @@ export type Item = {
 
 const DROPDOWN_ID_INPUT_SELECTION = 'combobox-input-selection'
 
-const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...', align = 'start', placeholder = 'Search...', grouped = false, ...rest}) => {
+const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...', align = 'start', placeholder = 'Search...', grouped = false, size = 'md', ...rest}) => {
   const containerRef = useRef<HTMLDivElement | null>(null)
 
   return (
     <Primitive.Root items={data} multiple={multiple} {...rest}>
       <Primitive.Trigger
-        className='flex bg-primary dark:bg-secondary min-h-9 text-md w-full items-center justify-between gap-3 rounded-sm outline-none border border-primary p-2 text-primary select-none hover:bg-secondary data-[popup-open]:bg-primary dark:data-[popup-open]:bg-secondary cursor-pointer'>
+        className={tm('flex bg-primary dark:bg-secondary text-md w-full items-center justify-between gap-3 rounded-sm outline-none border border-primary px-2 text-primary select-none hover:bg-secondary data-[popup-open]:bg-primary dark:data-[popup-open]:bg-secondary cursor-pointer', sizes[size])}>
         <div className={'flex-1 text-left'}>
           {
             multiple ?
@@ -124,9 +125,10 @@ const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...
 
 DropDown.displayName = 'Dropdown'
 
-const styles = cva([], {
-  variants: {},
-  defaultVariants: {}
-})
+const sizes = {
+  sm: 'min-h-8',
+  md: 'min-h-9',
+  lg: 'min-h-10'
+}
 
 export { DropDown }
