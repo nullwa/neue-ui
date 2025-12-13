@@ -68,8 +68,7 @@ const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...
 
         <Primitive.Clear
           nativeButton={false}
-          className={'text-secondary hover:bg-tertiary rounded-full cursor-pointer'}
-          render={(props) => <X {...props} size={14} className={'text-secondary'}/>}
+          render={(props) => <X {...props} size={14} className={'text-secondary hover:bg-tertiary rounded-full cursor-pointer debugger'}/>}
         />
 
         <Primitive.Icon className='flex'>
