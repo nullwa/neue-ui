@@ -17,7 +17,7 @@ const meta = {
   argTypes: {
     variant: {
       control: {type: 'select'},
-      options: ['default', 'outline', 'outline-brand', 'outline-error', 'outline-success', 'outline-warning', 'error', 'success', 'warning', 'brand', 'ghost'],
+      options: ['default', 'error', 'success', 'warning', 'brand', 'ghost', 'outline', 'ghost-brand', 'ghost-error', 'ghost-success', 'ghost-warning'],
       description: 'The variant style of the button.'
     },
     children: {

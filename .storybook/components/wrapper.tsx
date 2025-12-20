@@ -12,8 +12,13 @@ const Wrapper = (Story, context: StoryContext) => {
   }, [theme])
 
   return (
+    <div className={'grid grid-cols-2'} >
+      <div className={`dark-mode prose relative min-h-64 p-4 flex items-center justify-center bg-primary`}>
+        <Story/>
+      </div>
     <div className={`prose relative min-h-64 p-4 flex items-center justify-center bg-primary`}>
       <Story/>
+    </div>
     </div>
   )
 }

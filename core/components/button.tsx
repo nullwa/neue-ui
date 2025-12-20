@@ -31,35 +31,36 @@ Button.displayName = 'Button'
 
 const styles = cva(
   [
-    'capitalize contain-content select-none group flex items-center justify-center text-box relative cursor-pointer outline-none transition duration-100 ease-linear focus-within:outline-2 focus-within:outline-offset-2',
-    'disabled:cursor-not-allowed disabled:text-fg-disabled disabled:bg-disabled disabled:shadow-xs disabled:ring-disabled_subtle'
+    'capitalize contain-content select-none group flex items-center justify-center text-box relative cursor-pointer outline-none transition duration-100 ease-linear',
+    'disabled:cursor-not-allowed disabled:text-fg-disabled disabled:bg-disabled disabled:shadow-xs disabled:ring-disabled-subtle',
+    'focus-within:outline-2 focus-within:outline-offset-2 ring-1 ring-transparent'
   ],
   {
     variants: {
       variant: {
-        default: 'bg-fg-primary text-bg-primary shadow-xs-skeumorphic ring-1 ring-transparent ring-inset hover:bg-fg-secondary_hover data-loading:bg-fg-secondary_hover',
-        outline: 'bg-secondary text-primary shadow-xs-skeumorphic ring-1 ring-primary ring-inset hover:bg-primary_hover data-loading:bg-primary_hover',
-        error: 'bg-error-solid text-white shadow-xs-skeumorphic ring-1 ring-transparent ring-inset hover:bg-error-700 dark:hover:bg-error-500 data-loading:bg-error-700 dark:data-loading:bg-error-500',
-        success: 'bg-success-solid text-white shadow-xs-skeumorphic ring-1 ring-transparent ring-inset hover:bg-success-700 dark:hover:bg-success-500 data-loading:bg-success-700 dark:data-loading:bg-success-500',
-        warning: 'bg-warning-solid text-white shadow-xs-skeumorphic ring-1 ring-transparent ring-inset hover:bg-warning-700 dark:hover:bg-warning-500 data-loading:bg-warning-700 dark:data-loading:bg-warning-500',
-        brand: 'bg-brand-solid text-white shadow-xs-skeumorphic ring-1 ring-transparent ring-inset hover:bg-brand-solid_hover data-loading:bg-brand-solid_hover',
-        ghost: 'bg-primary text-primary ring-1 ring-transparent ring-inset hover:bg-secondary_hover',
-        'outline-brand': 'bg-brand-primary text-brand-primary shadow-xs-skeumorphic',
-        'outline-error': 'bg-error-primary text-error-primary shadow-xs-skeumorphic',
-        'outline-success': 'bg-success-primary text-success-primary shadow-xs-skeumorphic',
-        'outline-warning': 'bg-warning-primary text-warning-primary shadow-xs-skeumorphic'
+        default: 'bg-gray-950 hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 text-white shadow-xs-skeumorphic',
+        outline: 'bg-secondary hover:bg-secondary-hover text-secondary hover:text-secondary-hover border border-secondary',
+        error: 'bg-error-solid hover:bg-error-solid-hover text-white shadow-xs-skeumorphic',
+        success: 'bg-success-solid hover:bg-success-solid-hover text-white shadow-xs-skeumorphic',
+        warning: 'bg-warning-solid hover:bg-warning-solid-hover text-white shadow-xs-skeumorphic',
+        brand: 'bg-brand-solid hover:bg-brand-solid-hover text-white shadow-xs-skeumorphic',
+        ghost: 'bg-primary hover:bg-primary-hover text-primary',
+        'ghost-brand': 'text-brand-700 dark:text-brand-600 bg-brand-100 hover:bg-brand-200 dark:bg-brand-950/50 dark:hover:bg-brand-800/50  border border-brand-300 dark:border-brand-900',
+        'ghost-error': 'text-error-700 dark:text-error-600 bg-error-100 hover:bg-error-200 dark:bg-error-950/50 dark:hover:bg-error-800/50  border border-error-300 dark:border-error-900',
+        'ghost-success': 'text-success-700 dark:text-success-600 bg-success-100 hover:bg-success-200 dark:bg-success-950/50 dark:hover:bg-success-800/50  border border-success-300 dark:border-success-900',
+        'ghost-warning': 'text-warning-700 dark:text-warning-600 bg-warning-100 hover:bg-warning-200 dark:bg-warning-950/50 dark:hover:bg-warning-800/50  border border-warning-300 dark:border-warning-900'
       },
       isFancy: {
         true: 'before:absolute before:inset-px before:border before:border-white/50 before:mask-b-from-0%',
         false: null
       },
       size: {
-        sm: 'h-8 min-w-8 px-3 text-sm',
-        md: 'h-9 min-w-9 px-4 text-md',
-        lg: 'h-10 min-w-10 px-5 text-lg'
+        sm: 'h-7 min-w-7 px-2 text-sm',
+        md: 'h-8 min-w-8 px-3 text-base',
+        lg: 'h-9 min-w-9 px-4 text-lg'
       },
       radius: {
-        rounded: 'rounded-sm before:rounded-[3px]',
+        rounded: 'rounded-md before:rounded-[5px]',
         pilled: 'rounded-full before:rounded-full'
       }
     },
@@ -73,9 +74,9 @@ const styles = cva(
 )
 
 const iconSizeMap: Record<string, number> = {
-  sm: 16,
-  md: 18,
-  lg: 20
+  sm: 15,
+  md: 17,
+  lg: 19
 }
 
 export { Button }
