@@ -42,7 +42,7 @@ const meta: Meta<typeof Badge> = {
     },
     variant: {
       control: 'select',
-      options: ['primary', 'outline', 'outline-brand', 'error', 'outline-error', 'success', 'outline-success', 'warning', 'outline-warning', 'brand', 'ghost']
+      options: ['default', 'outline', 'brand', 'ghost', 'error', 'success', 'ghost-success', 'warning', 'ghost-warning', 'ghost-brand', 'ghost-error']
     },
     radius: {
       control: 'radio',
@@ -60,6 +60,6 @@ export const Default: Story = {
     removable: false,
     icon: undefined,
     radius: 'squared',
-    variant: 'brand'
+    variant: 'default'
   }
 }

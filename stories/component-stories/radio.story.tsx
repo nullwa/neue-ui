@@ -20,7 +20,7 @@ const meta: Meta<typeof Radio> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['default', 'brand', 'secondary', 'error', 'success']
+      options: ['default', 'brand', 'secondary', 'error', 'success', 'warning']
     },
     bordered: {control: 'boolean'},
     disabled: {control: 'boolean'},

@@ -31,7 +31,7 @@ const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...
   return (
     <Primitive.Root items={data} multiple={multiple} {...rest}>
       <Primitive.Trigger
-        className={tm('flex bg-primary dark:bg-secondary text-md w-full items-center justify-between gap-3 rounded-sm outline-none border border-primary px-2 text-primary select-none hover:bg-secondary data-[popup-open]:bg-primary dark:data-[popup-open]:bg-secondary cursor-pointer', sizes[size])}>
+        className={tm('flex bg-secondary text-base w-full items-center justify-between gap-3 rounded-md outline-none border border-primary px-2 text-primary select-none hover:bg-secondary data-[popup-open]:bg-primary dark:data-[popup-open]:bg-secondary cursor-pointer', sizes[size])}>
         <div className={'flex-1 text-left'}>
           {
             multiple ?
@@ -65,41 +65,35 @@ const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...
               </Primitive.Value>
           }
         </div>
-
         <Primitive.Clear
           nativeButton={false}
-          render={(props) => <X {...props} size={14} className={'text-secondary hover:bg-tertiary rounded-full cursor-pointer debugger'}/>}
+          render={(props) => <X {...props} size={14} className={'text-secondary hover:bg-tertiary rounded-full cursor-pointer'}/>}
         />
-
         <Primitive.Icon className='flex'>
           <ChevronsUpDown size={14} className={'text-secondary hover:bg-tertiary rounded-full'}/>
         </Primitive.Icon>
-
       </Primitive.Trigger>
-
       <Primitive.Portal>
         <Primitive.Positioner align={align} sideOffset={4} className={'z-9999'}>
           <Primitive.Popup
             aria-label={label}
-            className={'max-h-[24rem] w-[var(--anchor-width)] max-w-[var(--available-width)] origin-[var(--transform-origin)] overflow-hidden rounded-sm bg-primary border border-primary pt-0 text-primary outline-none transition-[transform, scale, opacity] duration-100'}>
+            className={'max-h-[24rem] w-[var(--anchor-width)] max-w-[var(--available-width)] origin-[var(--transform-origin)] overflow-y-aut rounded-md bg-primary border border-primary pt-0 text-primary outline-none transition-[transform, scale, opacity] duration-100'}>
             <div className='w-full h-[var(--input-container-height)] text-center'>
               <Primitive.Input
                 placeholder={placeholder}
                 id={DROPDOWN_ID_INPUT_SELECTION}
-                className='h-9 w-full group overflow-hidden flex items-center bg-primary dark:bg-secondary border-b border-primary outline-none text-primary placeholder:text-tertiary/50 px-2 focus:ring-primary/35 focus:border-ring focus:outline-none'
+                className='h-8 w-full group overflow-hidden flex items-center bg-primary dark:bg-secondary border-b border-primary outline-none text-primary text-base placeholder:text-base   placeholder:text-tertiary/50 px-2 focus:ring-primary/35 focus:border-ring focus:outline-none'
               />
             </div>
-
-            <Primitive.Empty className={'flex items-center justify-center p-2'}>No data found.</Primitive.Empty>
-
+            <Primitive.Empty className={'flex items-center justify-center p-2 text-primary'}>No data found.</Primitive.Empty>
             <Primitive.List>
               {(item: Item) => (
-                <Primitive.Item value={item} key={item.value} disabled={item.disabled} className={tm('p-2 text-md cursor-pointer flex items-center gap-2 hover:bg-tertiary', item.disabled && 'opacity-50 cursor-not-allowed')}>
+                <Primitive.Item value={item} key={item.value} disabled={item.disabled} className={tm('p-1 text-base cursor-pointer flex items-center gap-2 hover:bg-tertiary', item.disabled && 'opacity-50 cursor-not-allowed')}>
                   <div className={'flex-1 flex items-center gap-2'}>
                     <Avatar.Root data-slot='avatar' className={tm('select-none relative')}>
                       <div className={'overflow-hidden shrink-0 flex items-center justify-center cursor-pointer size-8 rounded-full'}>
                         <Avatar.Image data-slot='avatar-image' src={item.label.avatar} className='rounded-none'/>
-                        <Avatar.Fallback data-slot='avatar-fallback' className={tm('bg-quaternary text-secondary flex size-full text-md items-center justify-center')}>
+                        <Avatar.Fallback data-slot='avatar-fallback' className={tm('bg-quaternary text-secondary flex size-full text-base items-center justify-center')}>
                           {item.label.title[0]}
                         </Avatar.Fallback>
                       </div>
@@ -125,9 +119,9 @@ const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...
 DropDown.displayName = 'Dropdown'
 
 const sizes = {
-  sm: 'min-h-8',
-  md: 'min-h-9',
-  lg: 'min-h-10'
+  sm: 'min-h-7',
+  md: 'min-h-8',
+  lg: 'min-h-9'
 }
 
 export { DropDown }

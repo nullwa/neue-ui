@@ -73,7 +73,7 @@ const ProgressBar: FC<ProgressIndicatorWithTextProps> = ({value, min = 0, max = 
       return (
         <div className='w-full relative flex flex-col items-end gap-2'>
           {baseProgressBar}
-          <div style={{left: `${percentage}%`}} className='absolute -top-2 -translate-x-1/2 -translate-y-full rounded-sm bg-primary_alt px-3 py-2 shadow-lg ring-1 ring-secondary_alt'>
+          <div style={{left: `${percentage}%`}} className='absolute -top-2 -translate-x-1/2 -translate-y-full rounded-md bg-primary_alt px-3 py-2 shadow-lg ring-1 ring-secondary_alt'>
             <div className='text-xs font-semibold text-secondary tabular-nums'>{formattedValue}</div>
           </div>
         </div>
@@ -82,7 +82,7 @@ const ProgressBar: FC<ProgressIndicatorWithTextProps> = ({value, min = 0, max = 
       return (
         <div className='w-full relative flex flex-col items-end gap-2'>
           {baseProgressBar}
-          <div style={{left: `${percentage}%`}} className='absolute -bottom-2 -translate-x-1/2 translate-y-full rounded-sm bg-primary_alt px-3 py-2 shadow-lg ring-1 ring-secondary_alt'>
+          <div style={{left: `${percentage}%`}} className='absolute -bottom-2 -translate-x-1/2 translate-y-full rounded-md bg-primary_alt px-3 py-2 shadow-lg ring-1 ring-secondary_alt'>
             <div className='text-xs font-semibold text-secondary'>{formattedValue}</div>
           </div>
         </div>

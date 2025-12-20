@@ -37,16 +37,14 @@ const Accordion: FC<ComponentProps> = ({variant = 'solid', indicator = 'arrow', 
             <Primitive.Trigger data-slot='accordion-trigger' className={tm(styles({variant, size}), 'group transition-colors relative')}>
               {/* TITLE */}
               <span className='text-start'>{title}</span>
-
               {/* INDICATOR */}
               {indicator !== 'none' && (indicator === 'plus' ? (<Plus className='size-4 shrink-0 transition-all group-data-[panel-open]:rotate-45'/>) : (
                 <ChevronDown className='size-4 shrink-0 transition-transform group-data-[panel-open]:rotate-180'/>))}
             </Primitive.Trigger>
           </Primitive.Header>
-
           {/* PANEL — uses Base UI built-in animation */}
           <Primitive.Panel data-slot='accordion-content' className='h-[var(--accordion-panel-height)] overflow-hidden transition-[height] ease-out data-[starting-style]:h-0 data-[ending-style]:h-0'>
-            <div className='p-2 text-md text-secondary'>
+            <div className='p-2 text-base text-secondary'>
               {content}
             </div>
           </Primitive.Panel>
@@ -59,20 +57,23 @@ const Accordion: FC<ComponentProps> = ({variant = 'solid', indicator = 'arrow', 
 
 Accordion.displayName = 'Accordion'
 
-const styles = cva('cursor-pointer w-full flex items-center text-md text-primary font-medium justify-between gap-2 py-1 px-2 capitalize', {
+const styles = cva('cursor-pointer w-full flex items-center text-base text-primary font-medium justify-between gap-2 py-1 px-2 capitalize', {
     variants: {
       variant: {
         default: 'border-b border-secondary rounded-none',
-        outline: 'border border-secondary rounded-sm',
-        solid: 'border border-secondary bg-secondary/80 rounded-sm'
+        outline: 'border border-secondary rounded-md',
+        solid: 'border border-secondary bg-secondary/80 rounded-md'
       },
       size: {
-        sm: 'min-h-8',
-        md: 'min-h-9',
-        lg: 'min-h-10'
+        sm: 'min-h-7',
+        md: 'min-h-8',
+        lg: 'min-h-9'
       }
     },
-    defaultVariants: {variant: 'solid'}
+    defaultVariants: {
+      variant: 'solid',
+      size: 'md'
+    }
   }
 )
 

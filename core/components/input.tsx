@@ -27,7 +27,7 @@ const Input: FC<ComponentProps> = ({placeholder = 'placeholder', addon = undefin
 
     // If addon is a string (text)
     if (typeof addon === 'string') {
-      return <div className={tm('flex items-center justify-center text-secondary font-normal px-2 bg-tertiary h-full capitalize', size === 'sm' ? 'text-sm' : 'text-md')}>{addon}</div>
+      return <div className={tm('flex items-center justify-center text-secondary font-normal px-2 bg-tertiary h-full capitalize', size === 'sm' ? 'text-sm' : 'text-base')}>{addon}</div>
     }
 
     // If addon is a ReactNode
@@ -49,7 +49,7 @@ const Input: FC<ComponentProps> = ({placeholder = 'placeholder', addon = undefin
 Input.displayName = 'Input'
 
 const styles = cva(
-  ['group overflow-hidden flex items-center bg-primary dark:bg-secondary border-2 shadow-xs', '[&>input]:pear [&>input]:h-full [&>input]:w-full [&>input]:outline-none [&>input]:text-primary [&>input]:border-0 [&>input]:bg-transparent [&>input]:placeholder:text-tertiary/50 [&>input]:px-2'],
+  ['group overflow-hidden flex items-center bg-secondary border-2 shadow-xs', '[&>input]:pear [&>input]:h-full [&>input]:w-full [&>input]:outline-none [&>input]:text-primary [&>input]:border-0 [&>input]:bg-transparent [&>input]:placeholder:text-tertiary/50 [&>input]:px-2'],
   {
     variants: {
       variant: {
@@ -59,12 +59,12 @@ const styles = cva(
         warning: 'border-warning-600'
       },
       size: {
-        sm: '[&>input]:placeholder:text-sm focus-within:ring-2 h-8',
-        md: '[&>input]:placeholder:text-md focus-within:ring-3 h-9',
-        lg: '[&>input]:placeholder:text-md focus-within:ring-3 h-10'
+        sm: '[&>input]:placeholder:text-sm focus-within:ring-2 h-7',
+        md: '[&>input]:placeholder:text-base focus-within:ring-3 h-8',
+        lg: '[&>input]:placeholder:text-base focus-within:ring-3 h-9'
       },
       radius: {
-        squared: 'rounded-sm',
+        squared: 'rounded-md',
         pilled: 'rounded-full'
       },
       direction: {

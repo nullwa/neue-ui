@@ -20,14 +20,10 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['default', 'brand', 'error']
+      options: ['default', 'brand', 'error', 'success', 'warning']
     },
     bordered: {control: 'boolean'},
     disabled: {control: 'boolean'},
-    radius: {
-      control: {type: 'radio'},
-      options: ['squared', 'pilled']
-    },
     direction: {
       control: {type: 'radio'},
       options: ['leading', 'trailing']
@@ -46,7 +42,6 @@ export const Default: Story = {
     hint: 'You must accept before continuing',
     bordered: false,
     disabled: false,
-    radius: 'pilled',
     direction: 'leading',
     defaultChecked: false,
     onCheckedChange: (x) => console.log('toggled', x)

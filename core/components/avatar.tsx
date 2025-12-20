@@ -19,11 +19,10 @@ const Avatar: FC<ComponentProps> = ({src, fallback, status = null, verified = fa
     <Primitive.Root data-slot='avatar' className={tm('select-none relative')} {...rest}>
       <div className={tm(styles({size, radius, className}))}>
         <Primitive.Image data-slot='avatar-image' src={src} className='rounded-none'/>
-        <Primitive.Fallback data-slot='avatar-fallback' className={tm('bg-quaternary text-secondary flex size-full text-md items-center justify-center')}>
+        <Primitive.Fallback data-slot='avatar-fallback' className={tm('bg-quaternary text-secondary flex size-full text-base items-center justify-center')}>
           {fallback}
         </Primitive.Fallback>
       </div>
-
       {status && <Indicator size={size} status={status}/>}
       {verified && <VerifiedTick size={size} position={status != null ? 'left' : 'right'}/>}
     </Primitive.Root>
@@ -35,13 +34,13 @@ Avatar.displayName = 'Avatar'
 const styles = cva(['overflow-hidden shrink-0 flex items-center justify-center cursor-pointer'], {
   variants: {
     size: {
-      sm: 'size-8',
-      md: 'size-9',
-      lg: 'size-10'
+      sm: 'size-7',
+      md: 'size-8',
+      lg: 'size-9'
     },
     radius: {
       rounded: 'rounded-full',
-      squared: 'rounded-sm'
+      squared: 'rounded-md'
     }
   },
   defaultVariants: {
