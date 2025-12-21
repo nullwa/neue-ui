@@ -17,7 +17,7 @@
   --text-sm: calc(var(--spacing) * 3);
   --text-sm--line-height: calc(var(--spacing) * 4.5);
   --text-base: calc(var(--spacing) * 3.5);
-  --text-base--line-height: calc(var(--spacing) * 5);
+  --text-base--line-height: calc(var(--spacing) * 4.75);
   --text-lg: calc(var(--spacing) * 4);
   --text-lg--line-height: calc(var(--spacing) * 6.5);
   --text-xl: calc(var(--spacing) * 5);
