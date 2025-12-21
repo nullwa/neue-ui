@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs'
 import { Tabs } from '@/core/components/tabs'
 
 import Template from '@/templates/tabs.template.mdx'
+import { User } from 'lucide-react'
 
 const meta = {
   title: 'core/Tabs',
@@ -37,10 +38,10 @@ type Story = StoryObj<typeof Tabs>
 export const Default: Story = {
   args: {
     tabs: [
-      {label: 'Overview', value: 'overview', onClick: () => console.log('test'), content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 1</div>},
-      {label: 'Projects', value: 'projects', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 2</div>},
-      {label: 'Account', value: 'account', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 3</div>},
-      {label: 'notifications', count: 4, value: 'notifications', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 4</div>}
+      {label: {title: 'Overview', onClick: () => console.log('test')}, value: 'overview', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 1</div>},
+      {label: {title: 'Projects', icon: <User/>}, value: 'projects', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 2</div>},
+      {label: {title: 'Account', disabled: true}, value: 'account', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 3</div>},
+      {label: {title: 'notifications', count: 4}, value: 'notifications', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 4</div>}
     ],
     defaultValue: 'overview',
     size: 'md',

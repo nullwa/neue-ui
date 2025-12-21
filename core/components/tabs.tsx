@@ -6,11 +6,15 @@ import { Tabs as Primitive } from '@base-ui-components/react'
 import { cva, tm, type VariantProps } from '@/helpers/tailwind-merge'
 
 export type Tab = {
-  label: string
-  count?: number
+  label: {
+    title: string
+    count?: number
+    icon?: ReactNode
+    onClick?: () => void
+    disabled?: boolean
+  }
   value: string
   content: ReactNode
-  onClick?: () => void
 }
 
 type ComponentProps = VariantProps<typeof styles> & {
@@ -26,12 +30,15 @@ const Tabs: FC<ComponentProps> = ({tabs, defaultValue, variant = 'fill', radius 
           <Primitive.Tab
             key={tab.value}
             value={tab.value}
-            onClick={tab.onClick}
-            className={'group h-6 z-10 capitalize flex items-center justify-center gap-1 px-2 cursor-pointer text-base text-tertiary hover:text-primary data-[active]:text-primary outline-none select-none'}>{tab.label}
-            {typeof tab.count === 'number' && <span className='flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-solid/50 group-data-[active]:bg-brand-solid text-xs font-medium text-white'>{tab.count}</span>}
+            onClick={tab.label.onClick}
+            disabled={tab.label.disabled}
+            className={tm('group h-6 z-10 capitalize flex items-center justify-center gap-1 px-2 cursor-pointer text-base text-tertiary hover:text-primary data-[active]:text-primary outline-none select-none [&>svg]:size-4 [&>svg]:text-brand-primary', tab.label.disabled && 'opacity-50 text-tertiary hover:text-tertiary')}>
+            {tab.label.icon && tab.label.icon}
+            {tab.label.title}
+            {typeof tab.label.count === 'number' && <span className='flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-solid/50 group-data-[active]:bg-brand-solid text-xs font-medium text-white'>{tab.label.count}</span>}
           </Primitive.Tab>
         ))}
-        <Primitive.Indicator className={tm(indicatorStyles({radius: size === 'sm' ? 'none' : radius}))}/>
+        <Primitive.Indicator className={tm(indicatorStyles({radius}))}/>
       </Primitive.List>
       {tabs.map((tab) => (
         <Primitive.Panel key={tab.value} value={tab.value} className={tm('relative w-full h-full')}>
