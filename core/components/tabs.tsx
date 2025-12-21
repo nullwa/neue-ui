@@ -10,6 +10,7 @@ export type Tab = {
   count?: number
   value: string
   content: ReactNode
+  onClick?: () => void
 }
 
 type ComponentProps = VariantProps<typeof styles> & {
@@ -25,6 +26,7 @@ const Tabs: FC<ComponentProps> = ({tabs, defaultValue, variant = 'fill', radius 
           <Primitive.Tab
             key={tab.value}
             value={tab.value}
+            onClick={tab.onClick}
             className={'group h-6 z-10 capitalize flex items-center justify-center gap-1 px-2 cursor-pointer text-base text-tertiary hover:text-primary data-[active]:text-primary outline-none select-none'}>{tab.label}
             {typeof tab.count === 'number' && <span className='flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-solid/50 group-data-[active]:bg-brand-solid text-xs font-medium text-white'>{tab.count}</span>}
           </Primitive.Tab>
