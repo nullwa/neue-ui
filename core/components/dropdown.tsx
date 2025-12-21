@@ -75,7 +75,7 @@ const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...
         <Primitive.Positioner align={align} sideOffset={4} className={'z-9999'}>
           <Primitive.Popup
             aria-label={label}
-            className={'max-h-[24rem] w-[var(--anchor-width)] max-w-[var(--available-width)] origin-[var(--transform-origin)] overflow-y-auto rounded-md bg-primary border border-primary pt-0 text-primary outline-none transition-[transform, scale, opacity] duration-100'}>
+            className={'max-h-[18rem] w-[var(--anchor-width)] max-w-[var(--available-width)] origin-[var(--transform-origin)] overflow-y-auto rounded-md bg-primary border border-primary pt-0 text-primary outline-none transition-[transform, scale, opacity] duration-100'}>
             <div className='w-full h-[var(--input-container-height)] text-center'>
               <Primitive.Input
                 placeholder={placeholder}
