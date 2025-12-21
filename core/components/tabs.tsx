@@ -7,6 +7,7 @@ import { cva, tm, type VariantProps } from '@/helpers/tailwind-merge'
 
 export type Tab = {
   label: string
+  count?: number
   value: string
   content: ReactNode
 }
@@ -24,7 +25,9 @@ const Tabs: FC<ComponentProps> = ({tabs, defaultValue, variant = 'fill', radius 
           <Primitive.Tab
             key={tab.value}
             value={tab.value}
-            className={'h-6 z-10 flex items-center justify-center px-2 cursor-pointer text-base text-tertiary hover:text-primary data-[active]:text-primary outline-none select-none'}>{tab.label}</Primitive.Tab>
+            className={'group h-6 z-10 capitalize flex items-center justify-center gap-1 px-2 cursor-pointer text-base text-tertiary hover:text-primary data-[active]:text-primary outline-none select-none'}>{tab.label}
+            {typeof tab.count === 'number' && <span className='flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-solid/50 group-data-[active]:bg-brand-solid text-xs font-medium text-white'>{tab.count}</span>}
+          </Primitive.Tab>
         ))}
         <Primitive.Indicator className={tm(indicatorStyles({radius: size === 'sm' ? 'none' : radius}))}/>
       </Primitive.List>

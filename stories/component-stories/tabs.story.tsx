@@ -39,7 +39,8 @@ export const Default: Story = {
     tabs: [
       {label: 'Overview', value: 'overview', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 1</div>},
       {label: 'Projects', value: 'projects', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 2</div>},
-      {label: 'Account', value: 'account', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 3</div>}
+      {label: 'Account', value: 'account', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 3</div>},
+      {label: 'notifications', count: 4, value: 'notifications', content: <div className={'h-40 flex items-center justify-center text-tertiary'}>VALUE 4</div>}
     ],
     defaultValue: 'overview',
     size: 'md',
