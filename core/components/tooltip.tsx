@@ -32,7 +32,8 @@ const Tooltip: FC<ComponentProps> = ({title, description, children, arrow = fals
               'data-[state=delayed-open]:animate-in data-[state=closed]:animate-out',
               'data-[state=delayed-open]:fade-in data-[state=closed]:fade-out',
               'data-[side=top]:slide-in-from-bottom-0.5 data-[side=bottom]:slide-in-from-top-0.5',
-              'data-[side=left]:slide-in-from-right-0.5 data-[side=right]:slide-in-from-left-0.5'
+              'data-[side=left]:slide-in-from-right-0.5 data-[side=right]:slide-in-from-left-0.5',
+              !arrow && 'border border-secondary'
             )}>
               <span className='text-base font-medium text-primary'>{title}</span>
               {description && <span className='text-sm text-secondary'>{description}</span>}
