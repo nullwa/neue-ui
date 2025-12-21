@@ -11,3 +11,24 @@
 .debugger {
   border: 1px dashed red !important;
 }
+
+/* Firefox */
+html,
+body {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(156, 163, 175, 0.8) transparent;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.8);
+  border-radius: 9999px;
+}

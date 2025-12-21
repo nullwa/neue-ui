@@ -12,7 +12,6 @@ type ComponentProps = React.ComponentProps<typeof Primitive.Root> & {
   label: string
   align?: 'start' | 'center' | 'end'
   placeholder?: string
-  grouped?: boolean
   size?: 'sm' | 'md' | 'lg'
 }
 
@@ -20,12 +19,11 @@ export type Item = {
   label: { title: string; summary?: string; avatar?: string }
   value: string
   disabled?: boolean
-  group?: string
 }
 
 const DROPDOWN_ID_INPUT_SELECTION = 'combobox-input-selection'
 
-const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...', align = 'start', placeholder = 'Search...', grouped = false, size = 'md', ...rest}) => {
+const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...', align = 'start', placeholder = 'Search...', size = 'md', ...rest}) => {
   const containerRef = useRef<HTMLDivElement | null>(null)
 
   return (
@@ -77,12 +75,12 @@ const DropDown: FC<ComponentProps> = ({data, multiple = true, label = 'Select...
         <Primitive.Positioner align={align} sideOffset={4} className={'z-9999'}>
           <Primitive.Popup
             aria-label={label}
-            className={'max-h-[24rem] w-[var(--anchor-width)] max-w-[var(--available-width)] origin-[var(--transform-origin)] overflow-y-aut rounded-md bg-primary border border-primary pt-0 text-primary outline-none transition-[transform, scale, opacity] duration-100'}>
+            className={'max-h-[24rem] w-[var(--anchor-width)] max-w-[var(--available-width)] origin-[var(--transform-origin)] overflow-y-auto rounded-md bg-primary border border-primary pt-0 text-primary outline-none transition-[transform, scale, opacity] duration-100'}>
             <div className='w-full h-[var(--input-container-height)] text-center'>
               <Primitive.Input
                 placeholder={placeholder}
                 id={DROPDOWN_ID_INPUT_SELECTION}
-                className='h-8 w-full group overflow-hidden flex items-center bg-primary dark:bg-secondary border-b border-primary outline-none text-primary text-base placeholder:text-base   placeholder:text-tertiary/50 px-2 focus:ring-primary/35 focus:border-ring focus:outline-none'
+                className='h-8 w-full group overflow-hidden flex items-center bg-primary border-b border-primary outline-none text-primary text-base placeholder:text-base  placeholder:text-tertiary/50 px-2 focus:ring-primary/35 focus:border-ring focus:outline-none'
               />
             </div>
             <Primitive.Empty className={'flex items-center justify-center p-2 text-primary'}>No data found.</Primitive.Empty>
