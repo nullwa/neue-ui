@@ -5,6 +5,7 @@ import { cva, tm, type VariantProps } from '@/utils/tailwind-merge'
 
 import { Button as Primitive } from '@base-ui/react'
 
+/*  type  */
 type Props = Primitive.Props & VariantProps<typeof buttonStyle> & {}
 
 const Button: FC<Props> = ({variant, size, ...rest}) => {

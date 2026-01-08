@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "type": "module",
   "scripts": {
     "storybook": "storybook dev",
     "storybook:build": "storybook build"
@@ -25,6 +26,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "@storybook/react-vite": "^10.1.11",
     "@storybook/addon-docs": "^10.1.11",
+    "@storybook/builder-vite": "^10.1.11",
     "class-variance-authority": "^0.7.1",
     "@types/node": "^25.0.3",
     "@types/react": "^19.2.7",

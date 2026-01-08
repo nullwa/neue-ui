@@ -18,8 +18,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        method: 'alphabetical',
-        order: ['Introduction', ['Components', 'Shared', 'Utils', 'Helpers', 'Changelog']]
+        method: 'alphabetical'
       }
     },
     docs: {
