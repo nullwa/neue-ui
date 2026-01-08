@@ -1,9 +1,9 @@
-import { type  FC } from 'react'
+import type { FC, ReactNode } from 'react'
 
 import { DocsContainer, DocsContainerProps } from '@storybook/addon-docs/blocks'
 
 type ComponentProps = {
-  children: NonNullable<React.ReactNode>;
+  children: NonNullable<ReactNode>;
   context: DocsContainerProps['context'];
 };
 

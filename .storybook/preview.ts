@@ -1,9 +1,9 @@
-import '../styles/globals.css'
+import '../styles/global.css'
 
 import Wrapper from './components/wrapper'
 import Container from './components/container'
 
-import { type Preview } from '@storybook/nextjs'
+import { type Preview } from '@storybook/react-vite'
 
 const preview: Preview = {
   parameters: {

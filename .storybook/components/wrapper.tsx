@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { StoryContext } from '@storybook/nextjs'
+import { StoryContext } from '@storybook/react-vite'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error

@@ -1,26 +1,14 @@
-import type { StorybookConfig } from '@storybook/nextjs'
+import type { StorybookConfig } from '@storybook/react-vite'
 
 const config: StorybookConfig = {
-  stories: ['../stories/**/*.mdx', '../stories/**/*.story.@(ts|tsx)'],
+  stories: ['../stories/**/*.story.@(ts|tsx|mdx)'],
   addons: ['@storybook/addon-docs'],
   framework: {
-    name: '@storybook/nextjs',
-    options: {
-      nextConfigPath: '../next.config.js'
-    }
+    name: '@storybook/react-vite',
+    options: {}
   },
   staticDirs: ['../public'],
-  managerHead: (head) => {
-    return `
-      ${head}
-      <link rel="icon" type="image/x-icon" href="/icon-blue.svg" />
-      <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/plex/sans.css" />
-    `
-  },
-  docs: {
-    docsMode: true,
-    defaultName: 'Documentation'
-  }
+  docs: {docsMode: true, defaultName: 'Documentation'}
 }
 
 export default config
