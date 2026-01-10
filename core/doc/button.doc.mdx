@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/addon-docs/blocks'
+import * as ButtonStories from '@/stories/_ui_/button.story'
+
+<Meta of={ButtonStories}/>
+
+# Button
+
+[Source code](https://github.com/nullwa/vanity-ui/blob/main/core/ui/button.tsx)
+
+{/* <!-- TOC --> */}
+## Table of Contents
+
+- [Overview](#overview)
+- [Controls](#controls)
+
+{/* <!-- overview --> */}
+## Overview
+Buttons are clickable elements that are used to trigger actions. They communicate calls to action to the user and allow users to interact with pages in a variety of ways. `Button` labels express what action will occur when the user interacts with it.
+<Canvas of={ButtonStories.Overview}/>
+
+### Button with icon
+Once the icons are imported, you can pass them directly in to the `Button` component. Keep in mind, you will also need to add an iconDescription to help with screen-reader support if you use the renderIcon prop. If you are trying to render an icon-only button, please refer to the section on the hasIconOnly prop
+<Canvas of={ButtonStories.HasIcon}/>
+To render an `icon` of a different size, pass a size prop on the Icon to ensure the proper classes are applied:
+
+## Controls
+Additional props passed into `Button` will be forwarded along to the underlying button element.
+<Primary/>
+<Controls/>
+

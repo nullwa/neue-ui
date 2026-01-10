@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { StoryContext } from '@storybook/react-vite'
+import { StoryContext } from '@storybook/nextjs'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
@@ -12,7 +12,7 @@ const Wrapper = (Story, context: StoryContext) => {
   }, [theme])
 
   return (
-    <div className={`prose relative min-h-64 p-4 flex items-center justify-center bg-primary`}>
+    <div className={`prose relative min-h-24 p-4 flex items-center justify-center bg-primary`}>
       <Story/>
     </div>
   )

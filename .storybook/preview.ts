@@ -1,9 +1,9 @@
-import '../styles/global.css'
+import '../styles/globals.css'
 
 import Wrapper from './components/wrapper'
 import Container from './components/container'
 
-import { type Preview } from '@storybook/react-vite'
+import { type Preview } from '@storybook/nextjs'
 
 const preview: Preview = {
   parameters: {
@@ -18,7 +18,8 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        method: 'alphabetical'
+        method: 'alphabetical',
+        order: ['Introduction', ['Components', 'Shared', 'Utils', 'Helpers', 'Changelog']]
       }
     },
     docs: {

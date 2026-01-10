@@ -1,0 +1,24 @@
+diff --git a/hooks/use-clipboard.ts b/core/hooks/use-clipboard.ts
+rename from hooks/use-clipboard.ts
+rename to core/hooks/use-clipboard.ts
+diff --git a/hooks/use-breakpoint.ts b/core/hooks/use-breakpoint.ts
+rename from hooks/use-breakpoint.ts
+rename to core/hooks/use-breakpoint.ts
+diff --git a/helpers/array-of-paths.ts b/core/utils/array-of-paths.ts
+rename from helpers/array-of-paths.ts
+rename to core/utils/array-of-paths.ts
+diff --git a/hooks/use-debounce.ts b/core/hooks/use-debounce.ts
+rename from hooks/use-debounce.ts
+rename to core/hooks/use-debounce.ts
+diff --git a/helpers/get-initials.ts b/core/utils/get-initials.ts
+rename from helpers/get-initials.ts
+rename to core/utils/get-initials.ts
+diff --git a/helpers/color-compliance.ts b/core/utils/color-compliance.ts
+rename from helpers/color-compliance.ts
+rename to core/utils/color-compliance.ts
+diff --git a/helpers/tailwind-merge.ts b/core/utils/tailwind-merge.ts
+rename from helpers/tailwind-merge.ts
+rename to core/utils/tailwind-merge.ts
+diff --git a/helpers/is-react-component.ts b/core/utils/is-react-component.ts
+rename from helpers/is-react-component.ts
+rename to core/utils/is-react-component.ts
