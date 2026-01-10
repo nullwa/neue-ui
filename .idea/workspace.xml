@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ec0f911-a1a3-4181-b015-6ee6f9bad428" name="Changes" comment="update the name and architecture of vanity ui">
-      <change afterPath="$PROJECT_DIR$/.storybook/preview-head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/doc/button.doc.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stories/_ui_/button.story.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vanity-ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vanity-ui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/components/wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/components/wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/preview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/docs/button.doc.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/core/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/ui/button.story.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/array-of-paths.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils/array-of-paths.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/color-compliance.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils/color-compliance.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/get-initials.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils/get-initials.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/is-react-component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils/is-react-component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/tailwind-merge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils/tailwind-merge.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" />
-    </list>
+    <list default="true" id="6ec0f911-a1a3-4181-b015-6ee6f9bad428" name="Changes" comment="update the name and architecture of vanity ui" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +62,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "c1a5c901",
     "javascript.preferred.runtime.type.id": "bun",
     "last_opened_file_path": "C:/Users/wales/Repositories/vanity-ui",
     "list.type.of.created.stylesheet": "CSS",
@@ -152,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767903517493</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update the name and architecture of vanity ui">
+      <option name="closed" value="true" />
+      <created>1768037372916</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1768037372916</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
